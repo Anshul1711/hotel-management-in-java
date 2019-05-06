@@ -9,13 +9,13 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="521.0" prefWidth="632.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane prefHeight="624.0" prefWidth="645.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
    <children>
-      <AnchorPane layoutX="-36.0" prefHeight="520.0" prefWidth="632.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="-36.0" prefHeight="624.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <BorderPane layoutY="-63.0" prefHeight="521.0" prefWidth="632.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <BorderPane layoutY="-63.0" prefHeight="624.0" prefWidth="643.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <left>
-                  <VBox prefHeight="520.0" prefWidth="169.0" style="-fx-background-color: #2196f3;" BorderPane.alignment="CENTER">
+                  <VBox prefHeight="469.0" prefWidth="182.0" style="-fx-background-color: #2196f3;" BorderPane.alignment="CENTER">
                      <children>
                         <Label alignment="CENTER" opacity="0.78" prefHeight="80.0" prefWidth="165.0" style="-fx-background-color: #2196f30f;" text="Gestion Hôtel" textFill="#171d6e">
                            <font>
@@ -58,7 +58,7 @@
                   </VBox>
                </left>
                <top>
-                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="99.0" prefWidth="632.0" style="-fx-background-color: #2d3246;;" text="Hôtel Bano Palace" textFill="WHITE" BorderPane.alignment="CENTER">
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="99.0" prefWidth="647.0" style="-fx-background-color: #2d3246;;" text="Hôtel Bano Palace" textFill="WHITE" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="45.0" />
                      </font>
@@ -80,7 +80,7 @@
                   </AnchorPane>
                </center>
                <bottom>
-                  <Label alignment="CENTER" prefHeight="56.0" prefWidth="632.0" style="-fx-background-color: #2d3246;;" text="\@copyrigth2019" textFill="WHITE" BorderPane.alignment="CENTER" />
+                  <Label alignment="CENTER" prefHeight="56.0" prefWidth="649.0" style="-fx-background-color: #2d3246;;" text="\@copyrigth2019" textFill="WHITE" BorderPane.alignment="CENTER" />
                </bottom>
             </BorderPane>
          </children>
