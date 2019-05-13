@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="467.0" style="-fx-background-color: #0160a4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="26.0" layoutY="14.0" prefHeight="63.0" prefWidth="405.0" style="-fx-background-color: #2195a4;">
+         <children>
+            <Label layoutX="40.0" layoutY="9.0" text="Réservation d'une salle" textFill="#f2efef">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="26.0" layoutY="109.0" prefHeight="431.0" prefWidth="405.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="23.0" layoutY="31.0" text="Client" />
+            <ComboBox layoutX="23.0" layoutY="48.0" prefHeight="25.0" prefWidth="286.0" />
+            <Label layoutX="26.0" layoutY="82.0" text="Salle" />
+            <ComboBox layoutX="23.0" layoutY="99.0" prefHeight="25.0" prefWidth="286.0" />
+            <Label layoutX="23.0" layoutY="137.0" text="Date de réservation" />
+            <DatePicker layoutX="23.0" layoutY="154.0" prefHeight="25.0" prefWidth="286.0" />
+            <Label layoutX="21.0" layoutY="188.0" prefHeight="17.0" prefWidth="69.0" text="Date d'arrivée" />
+            <DatePicker layoutX="23.0" layoutY="211.0" prefHeight="25.0" prefWidth="286.0" />
+            <Label layoutX="23.0" layoutY="250.0" text="Date de départ" />
+            <DatePicker layoutX="23.0" layoutY="273.0" prefHeight="25.0" prefWidth="286.0" />
+            <Label layoutX="23.0" layoutY="305.0" text="Nombre de place" />
+            <TextField layoutX="23.0" layoutY="329.0" prefHeight="25.0" prefWidth="286.0" />
+            <Button layoutX="23.0" layoutY="380.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" style="-fx-background-color: dodgerblue;" text="Enregistrer" textFill="#fcf9f9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>

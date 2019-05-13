@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="426.0" style="-fx-background-color: #0175a1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="28.0" layoutY="27.0" prefHeight="66.0" prefWidth="370.0" style="-fx-background-color: #2195a4;">
+         <children>
+            <Label layoutX="28.0" layoutY="20.0" prefHeight="27.0" prefWidth="311.0" text="AJOUTER UNE CHAMBRE" textFill="#ebe8e8">
+               <font>
+                  <Font name="Arial Bold Italic" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="109.0" prefHeight="321.0" prefWidth="370.0" style="-fx-background-color: #FFF;">
+         <children>
+            <Label layoutX="25.0" layoutY="23.0" prefHeight="27.0" prefWidth="106.0" text="N° CHAMBRE" textFill="#5dc3c3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="123.0" layoutY="24.0" prefHeight="25.0" prefWidth="228.0" />
+            <Button layoutX="78.0" layoutY="238.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="241.0" style="-fx-background-color: #21D5a4;" text="ENREGISTRER" textFill="#f5f2f2">
+               <font>
+                  <Font name="Arial Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="2.0" />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="454.0" style="-fx-background-color: #0160a4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="52.0" layoutY="14.0" prefHeight="41.0" prefWidth="358.0" style="-fx-background-color: #2195a4;">
+         <children>
+            <Label layoutX="38.0" layoutY="3.0" text="AJOUTER UNE FACTURE" textFill="#f8f6f6">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="51.0" layoutY="71.0" prefHeight="337.0" prefWidth="358.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="24.0" layoutY="28.0" text="Client" />
+            <TextField layoutX="24.0" layoutY="55.0" prefHeight="25.0" prefWidth="256.0" />
+            <Label layoutX="24.0" layoutY="90.0" text="Date de facture" />
+            <DatePicker layoutX="24.0" layoutY="117.0" prefHeight="25.0" prefWidth="256.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </DatePicker>
+            <Label layoutX="24.0" layoutY="151.0" prefHeight="17.0" prefWidth="110.0" text="Type de payement" />
+            <ChoiceBox id="facture" disable="true" layoutX="24.0" layoutY="180.0" prefHeight="25.0" prefWidth="256.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ChoiceBox>
+            <Label layoutX="27.0" layoutY="217.0" text="Montant" />
+            <TextField layoutX="24.0" layoutY="244.0" prefHeight="25.0" prefWidth="256.0" />
+            <Button layoutX="24.0" layoutY="289.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: dodgerblue;" text="ENREGISTRER" textFill="#fcf9f9">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>
