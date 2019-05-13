@@ -23,7 +23,7 @@
       </Pane>
       <Pane layoutX="31.0" layoutY="109.0" prefHeight="321.0" prefWidth="370.0" style="-fx-background-color: #FFF;">
          <children>
-            <Label layoutX="25.0" layoutY="23.0" prefHeight="27.0" prefWidth="106.0" text="N° CHAMBRE" textFill="#5dc3c3">
+             <Label layoutX="25.0" layoutY="23.0" prefHeight="27.0" prefWidth="106.0" text="N° CHAMBRE" textFill="#5dc3c3">
                <font>
                   <Font size="14.0" />
                </font>
