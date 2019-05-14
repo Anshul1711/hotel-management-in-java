@@ -1,8 +1,5 @@
 package fr.hotel.model.Model1;
 
-
-import java.util.*;
-
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -13,39 +10,21 @@ import javafx.beans.property.StringProperty;
  * 
  */
 public class Client implements CrudInterface{
-    /**
-	 * @param idClient
-	 * @param nomClient
-	 * @param prenomClient
-	 * @param sexe
-	 * @param numCni
-	 * @param nationnalite
-	 */
-	public Client(IntegerProperty idClient, StringProperty nomClient, StringProperty prenomClient,
-			SimpleObjectProperty<Sexe> sexe, StringProperty numCni, StringProperty nationnalite) {
-		super();
-		this.idClient = idClient;
-		this.nomClient = nomClient;
-		this.prenomClient = prenomClient;
-		this.sexe = sexe;
-		this.numCni = numCni;
-		this.nationnalite = nationnalite;
-	}
-
+  
 	/**
      * 
      */
-    private IntegerProperty idClient = new SimpleIntegerProperty();
+    private IntegerProperty id = new SimpleIntegerProperty();
 
     /**
      * 
      */
-    private StringProperty nomClient = new SimpleStringProperty();
+    private StringProperty nom = new SimpleStringProperty();
 
     /**
      * 
      */
-    private StringProperty prenomClient = new SimpleStringProperty();
+    private StringProperty prenom = new SimpleStringProperty();
 
     /**
      * 
@@ -62,7 +41,23 @@ public class Client implements CrudInterface{
      */
     private StringProperty nationnalite = new SimpleStringProperty();
 
-
+    /**
+	 * @param id
+	 * @param nom
+	 * @param prenom
+	 * @param sexe
+	 * @param numCni
+	 * @param nationnalite
+	 */
+	public Client(int id_client, String n, String p,
+		 Sexe s, String num_cni, String natio) {
+		id.set(id_client);
+		nom.set(n);
+		prenom.set(p);
+		sexe.set(s);
+		numCni.set(num_cni);
+		nationnalite.set(natio);
+	}
 
 
     /**
@@ -97,48 +92,32 @@ public class Client implements CrudInterface{
         return;
     }
 
-	public final IntegerProperty idClientProperty() {
-		return this.idClient;
+	public IntegerProperty getId() {
+		return this.id;
 	}
 	
 
-	public final int getIdClient() {
-		return this.idClientProperty().get();
+	public void setId(IntegerProperty id) {
+		this.id = id;
+	}
+	
+	public StringProperty getNom() {
+		return this.nom;
 	}
 	
 
-	public final void setIdClient(final int idClient) {
-		this.idClientProperty().set(idClient);
+	public void setNom(StringProperty nom) {
+		this.nom = nom;
 	}
 	
 
-	public final StringProperty nomClientProperty() {
-		return this.nomClient;
+	public final StringProperty getPrenom() {
+		return this.prenom;
 	}
 	
 
-	public final String getNomClient() {
-		return this.nomClientProperty().get();
-	}
-	
-
-	public final void setNomClient(final String nomClient) {
-		this.nomClientProperty().set(nomClient);
-	}
-	
-
-	public final StringProperty prenomClientProperty() {
-		return this.prenomClient;
-	}
-	
-
-	public final String getPrenomClient() {
-		return this.prenomClientProperty().get();
-	}
-	
-
-	public final void setPrenomClient(final String prenomClient) {
-		this.prenomClientProperty().set(prenomClient);
+	public void setPrenom(StringProperty prenom) {
+		this.prenom = prenom;
 	}
 	
 
@@ -152,38 +131,28 @@ public class Client implements CrudInterface{
 	}
 	
 
-	public final void setSexe(final Sexe sexe) {
-		this.sexeProperty().set(sexe);
+	public void setSexe(SimpleObjectProperty<Sexe> sexe) {
+		this.sexe = sexe;
 	}
 	
 
-	public final StringProperty numCniProperty() {
+	public StringProperty getNumCni() {
 		return this.numCni;
 	}
 	
 
-	public final String getNumCni() {
-		return this.numCniProperty().get();
+	public void setNumCni(StringProperty numCni) {
+		this.numCni = numCni;
 	}
 	
 
-	public final void setNumCni(final String numCni) {
-		this.numCniProperty().set(numCni);
-	}
-	
-
-	public final StringProperty nationnaliteProperty() {
+	public StringProperty getNationnalite() {
 		return this.nationnalite;
 	}
 	
 
-	public final String getNationnalite() {
-		return this.nationnaliteProperty().get();
-	}
-	
-
-	public final void setNationnalite(final String nationnalite) {
-		this.nationnaliteProperty().set(nationnalite);
+	public void setNationnalite(StringProperty nationnalite) {
+		this.nationnalite = nationnalite;
 	}
 	
 
