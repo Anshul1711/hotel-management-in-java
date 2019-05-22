@@ -12,12 +12,12 @@
    <left>
       <VBox prefHeight="571.0" prefWidth="133.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#displayChambreManagement" prefHeight="100.0" prefWidth="200.0" text="Chambres">
+            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="Chambres">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="Salles">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#displaySalleManagement" prefHeight="100.0" prefWidth="200.0" text="Salles">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>

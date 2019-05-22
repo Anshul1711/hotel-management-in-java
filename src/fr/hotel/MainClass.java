@@ -8,6 +8,7 @@ import fr.hotel.model.Model1.Sexe;
 import fr.hotel.view.ClientMapping;
 import fr.hotel.view.FormClientMapping;
 import fr.hotel.view.MainMenuMapping;
+import fr.hotel.view.SalleEditDialogMapping;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,13 +25,19 @@ public class MainClass extends Application {
 	private BorderPane mainContainer;
 	private Stage mainStage;
 	private Stage clientStage;
+	private Stage salleStage;
 	private ObservableList<Client> listClient = FXCollections.observableArrayList();
-	private ObservableList<Salle> listeSalle = FXCollections.observableArrayList();
+	private ObservableList<Salle> listSalle = FXCollections.observableArrayList();
 
 	public	MainClass() {
+		//intantialize some Client object
 		listClient.add(new Client(1, "djo", "Kenmeni", Sexe.MASCULIN, "1295434", "Camerounaise"));
 		listClient.add(new Client(2, "djo", "Claude", Sexe.FEMININ, "1239434", "Camerounaise"));
 		listClient.add(new Client(3, "djo", "André", Sexe.MASCULIN, "1235434", "Camerounaise"));
+		//intantialize some Salle object
+		listSalle.add(new Salle());
+		listSalle.add(new Salle());
+		listSalle.add(new Salle());
 	}
 	
 	@Override
@@ -90,6 +97,21 @@ public class MainClass extends Application {
 		}
 	}
 	
+	//methode that will use to load ui management salle
+		@FXML
+		public void loadSalleManagerUi() {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainClass.class.getResource("view/SalleView.fxml"));
+			try {
+				AnchorPane page = (AnchorPane) loader.load();
+				mainContainer.setCenter(page);
+				MainMenuMapping controleur = loader.getController();
+				controleur.setMainApp(this);
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+	
 	//methode that will use to load ui management employe
 	@FXML
 	public void loadEmployeManagerUi() {
@@ -134,8 +156,49 @@ public class MainClass extends Application {
 		}
 	}
 	
+	/* function that will be use to edit or add a main*/
+	public void displaySalleEditDialog(Salle s, String title) {
+		FXMLLoader loader = new FXMLLoader(MainClass.class.getResource("view/SalleEditDialog.fxml"));
+		try {
+			//load the fxml ui that will use to add or edit main
+			AnchorPane page = (AnchorPane) loader.load();
+			
+			//creating a new stage
+			salleStage = new Stage();
+			salleStage.setTitle(title);
+			salleStage.initModality(Modality.WINDOW_MODAL);
+			//Avec cette instruction, notre fenêtre modifiée sera modale
+	        //par rapport à notre stage principal
+			salleStage.initOwner(mainStage);
+			//define our scene for the new stage
+			Scene scene = new Scene(page);
+			salleStage.setScene(scene);
+			SalleEditDialogMapping controller = loader.getController(); 
+			controller.setMainApp(this);
+			controller.setSalle(s);
+			
+			// Show the dialog and wait until the user closes it
+			salleStage.showAndWait();
+			
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Helper method that return a list of client
+	 * 
+	 */
 	public ObservableList<Client> getListClient() {
 		return this.listClient;
+	}
+	
+	/**
+	 * Helper method that return a list of salle
+	 * 
+	 */
+	public ObservableList<Salle> getListSalle() {
+		return listSalle;
 	}
 	
 	public Stage getStage() {
@@ -144,6 +207,10 @@ public class MainClass extends Application {
 	
 	public Stage getClientStage() {
 		return clientStage;
+	}
+	
+	public Stage getSalleStage() {
+		return salleStage;
 	}
 	
 	public BorderPane getMainContainer() {

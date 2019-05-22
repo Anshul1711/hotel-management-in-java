@@ -1,126 +1,90 @@
 package fr.hotel.model.Model1;
 
-
-import java.util.*;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 /**
  * 
  */
 public class Salle {
+	
+    private StringProperty id = new SimpleStringProperty();
+    
+    private IntegerProperty nbPlace = new SimpleIntegerProperty();
 
+    private SimpleObjectProperty<TypeSalle> type = new SimpleObjectProperty<>();
+
+    private StringProperty description = new SimpleStringProperty();
+    
     /**
      * Default constructor
      */
     public Salle() {
+    	this(null, 0, null, null);
     }
-
-    /**
-     * 
-     */
-    private int id_salle;
-
-    /**
-     * 
-     */
-    private String type_salle;
-
-    /**
-     * 
-     */
-    private boolean etat;
-
-    /**
-     * 
-     */
-    private double tarif;
-
-
-    /**
-     * @return
-     */
-    public void ajouter() {
-        // TODO implement here
-        return;
+    
+    public Salle(String i, int np, TypeSalle  t, String d) {
+    	id.set(i);
+    	nbPlace.set(np);
+    	type.set(t);
+    	description.set(d);
     }
+	
 
-    /**
-     * @return
-     */
-    public void modifier() {
-        // TODO implement here
-        return;
-    }
+	public String getId() {
+		return this.id.get();
+	}
+	
+	public final void setId(String id) {
+		this.id.set(id);
+	}
+	
+	
+	public StringProperty idProperty() {
+        return id;
+	}
 
-    /**
-     * @return
-     */
-    public void supprimer() {
-        // TODO implement here
-        return;
+	public int getNbPlace() {
+		return this.nbPlace.get();
+	}
+	
+	public void setNbPlace(int nbPlace) {
+		this.nbPlace.set(nbPlace);
+	}
+	
+	public IntegerProperty npProperty() {
+        return nbPlace;
     }
+	
+	public TypeSalle getType() {
+		return this.type.get();
+	}
+	
 
-    /**
-     * @return
-     */
-    public int getIdSalle() {
-        // TODO implement here
-        return 0;
-    }
+	public void setType(TypeSalle type) {
+		this.type.set(type);
+	}
 
-    /**
-     * @return
-     */
-    public String getType() {
-        // TODO implement here
-        return "";
-    }
+	public ObjectProperty<TypeSalle> typeProperty() {
+		return this.type;
+	}
+	
+	 public StringProperty descriptionProperty() {
+	        return description;
+	 }
 
-    /**
-     * @return
-     */
-    public boolean getEtat() {
-        // TODO implement here
-        return false;
-    }
+	public String getDescription() {
+		return this.description.get();
+	}
+	
 
-    /**
-     * @return
-     */
-    public double getTarif() {
-        // TODO implement here
-        return 0.0d;
-    }
-
-    /**
-     * @return
-     */
-    public void setType() {
-        // TODO implement here
-        return;
-    }
-
-    /**
-     * @return
-     */
-    public void setEtat() {
-        // TODO implement here
-        return;
-    }
-
-    /**
-     * @return
-     */
-    public void setTarif() {
-        // TODO implement here
-        return;
-    }
-
-    /**
-     * @return
-     */
-    public void afficher() {
-        // TODO implement here
-        return;
-    }
+	public void setDescription(String d) {
+		this.description.set(d);
+	}
+	
 
 }
