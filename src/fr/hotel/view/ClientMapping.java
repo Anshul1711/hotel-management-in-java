@@ -90,6 +90,19 @@ public class ClientMapping {
     	}
     }
     
+    //function that will be use to add a new client
+    public void ajouter() {
+    	this.main.displayClientDialog(new Client(), "Création d'un client");
+    	
+        return;
+    }
+    
+  //function that will be use to add a new client
+    public void modifier() {
+    	this.main.displayClientDialog(new Client(), "Modification d'un client");
+        return;
+    }
+    
     //function that will remove a selected client to the ui
     @FXML
     public void supprimer() {

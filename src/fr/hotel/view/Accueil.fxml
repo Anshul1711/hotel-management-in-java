@@ -8,12 +8,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.hotel.view.MainMenuMapping">
    <left>
       <VBox prefHeight="571.0" prefWidth="133.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="Chambres">
+            <Button mnemonicParsing="false" onAction="#displayChambreManagement" prefHeight="100.0" prefWidth="200.0" text="Chambres">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
@@ -23,12 +22,12 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="Clients">
+            <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#displayClientManagement" prefHeight="100.0" prefWidth="200.0" text="Clients">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="Employées">
+            <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#displayEmployeManagement" prefHeight="100.0" prefWidth="200.0" text="Employées">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
@@ -46,17 +45,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="Fiichier">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Nouveau">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Quitter">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" text="Nouveau" />
+                  <MenuItem fx:id="quitter" mnemonicParsing="false" onAction="#fermer" text="Quitter" />
             </items>
           </Menu>
         </menus>

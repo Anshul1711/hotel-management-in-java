@@ -60,7 +60,17 @@ public class Client implements CrudInterface{
 	}
 
 
-    /**
+    public Client() {
+		// TODO Auto-generated constructor stub
+    	sexe.set(Sexe.INCONNU);
+        nom.set("");
+        prenom.set("");
+        numCni.set("");
+        nationnalite.set("");
+	}
+
+
+	/**
      * @return
      */
     public void ajouter() {
